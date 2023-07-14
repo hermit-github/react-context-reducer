@@ -1,8 +1,12 @@
-import React from "react";
+import React,{useState} from "react";
 import "./SideFilters.scss";
 import { Button, Form } from "react-bootstrap";
+import Rating from "./Rating";
 
 const SideFilters = () => {
+
+  const [rate, setRate] = useState(3)
+
   return (
     <div className="filters">
       <span className="filter-title">Filter Products</span>
@@ -41,8 +45,9 @@ const SideFilters = () => {
           />
         </Form.Group>
 
-        <span>
+        <span className="rating-section">
           <label htmlFor="">Rating:</label>
+          <Rating rating={rate} style={{cursor:'pointer'}} onClick={setRate}/>
         </span>
 
         <Button variant="light">Clear Filters</Button>
