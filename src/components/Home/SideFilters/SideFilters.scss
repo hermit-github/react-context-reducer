@@ -1,0 +1,27 @@
+
+.filters{
+    background-color: #343a50;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    
+    color: #fff;
+    height: 80vh;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px 0px #888888;
+
+    .filter-title{
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin-bottom: 1em;
+    }
+
+    .filter-controls{
+        display: flex;
+        flex-direction: column;
+        height: 25%;
+        justify-content: space-around;
+    }
+}

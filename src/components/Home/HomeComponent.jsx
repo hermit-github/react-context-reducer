@@ -1,9 +1,14 @@
 import React from 'react'
 import './HomeComponent.scss'
+import SideFilters from './SideFilters/SideFilters'
+import Products from './Products/Products'
 
 const HomeComponent = () => {
   return (
-    <div>HomeComponent</div>
+    <div className='home'>
+      <SideFilters/>
+      <Products/>
+    </div>
   )
 }
 
