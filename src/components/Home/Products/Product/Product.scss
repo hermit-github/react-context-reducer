@@ -1,0 +1,12 @@
+
+.product{
+    width: 30%;
+    margin: 0.6rem;
+
+    .product-card-buttons{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+}

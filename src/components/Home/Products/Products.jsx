@@ -7,7 +7,7 @@ const Products = () => {
   const {state:{products}} = useContext(Cart)
 
   return (
-    <div className='product-container'>
+    <div className='products-container'>
       {products.map((product ) => {
         return <Product product={product}/>
       })}
