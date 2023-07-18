@@ -1,9 +1,10 @@
 import React, { useContext } from 'react'
-import { Badge, Container, Dropdown, FormControl, Nav, Navbar } from 'react-bootstrap'
+import { Badge, Button, Container, Dropdown, FormControl, Nav, Navbar } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import './header.scss'
 import {FaShoppingCart} from 'react-icons/fa'
 import Cart from '../../context/Context'
+import CartItem from './CartItem'
 
 const Header = () => {
 
@@ -31,7 +32,12 @@ const Header = () => {
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu style={{minWidth:370}}>
-                        {cart.length ? cart.map(item => <div>Something</div>):(<span style={{padding:10}}>Cart is Empty</span>)}
+                        {cart.length ? cart.map(item => <CartItem item={item}/>):(<span style={{padding:10}}>Cart is Empty</span>)}
+                        <Link to='/cart'>
+                            <Button style={{width:'95%',margin:"0 10px"}}>
+                                Go To Cart
+                            </Button>
+                        </Link>
                     </Dropdown.Menu>
 
                 </Dropdown>
